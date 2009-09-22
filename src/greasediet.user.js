@@ -33,5 +33,20 @@ $(function(){
     .css('background', 'transparent url(data:image/png;base64,' + saveIcon + ') no-repeat scroll 12px 0')
     .css('line-height', '24px')
     .css('padding-left', '40px');
+
+  // hook up click action
+  $('.ExportToCsv').click(function(){
+
+    // create the CSV
+    var csvRows = [];
+    $('.Module tbody tr').each(function(){
+      var date = $(this).find('td:first a').html();
+      var weight = $(this).find('td:last').html();
+      csvRows.unshift('"' + date + '","' + weight + '"');
+    });
+    var csvRaw = csvRows.join("\n");
     
+
+    return false;
+  });
 });
