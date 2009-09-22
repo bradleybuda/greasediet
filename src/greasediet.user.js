@@ -114,7 +114,7 @@ $(function(){
     var csvRows = [];
     $('.Module tbody tr').each(function(){
       var date = $(this).find('td:first a').html();
-      var weight = $(this).find('td:last').html();
+      var weight = parseFloat($(this).find('td:last').html());
       csvRows.unshift('"' + date + '","' + weight + '"');
     });
     var csvRaw = csvRows.join("\n");
