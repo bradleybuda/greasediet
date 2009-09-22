@@ -20,5 +20,6 @@ TODOs
 
 * Nicer filename on downloaded file
 * Clean up timestamps to play nice with excel
+* Add moving average to chart (like [The Hacker's Diet](http://www.fourmilab.ch/hackdiet/e4/pencilpaper.html#PencilMovingAverages))
 * Other, non-CSV-related goodies
 
